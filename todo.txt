@@ -11,13 +11,8 @@ GRAPHING TODO LIST
   - max
   - min
   - max rate of change
+  - drops
+  - latency violations
 * automatically convert names: "rec-hw:0" --> "rec.hw.0"
 
-########################
-DEAL WITH THIS!!!
-
-Warning message:
-Removed 1 rows containing missing values (geom_path). 
-
-THIS WILL MASK DROPS!!!
-########################
+* highlight background on disontinuities?
