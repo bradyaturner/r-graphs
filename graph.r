@@ -31,4 +31,8 @@ plot(p)
 
 p2 <- ggplot(data, aes(x=timestamp, play.hw.0Src)) + geom_line()
 p3 <- ggplot(data, aes(x=timestamp, play.hw.0)) + geom_line()
+
+plot(p2)
+plot(p3)
+
 multiplot(p2,p3)
