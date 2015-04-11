@@ -27,9 +27,9 @@ p <- ggplot(d2.m, aes(x=timestamp,y=value, color=variable)) +
       xlab("Time (s)") +
       labs(color = "Measurement")
 # Plot as pdf
-plot(p)
+print(p)
 
-# copy the data
+# copy the data & remove timestamp column
 d3 <- d2
 d3$timestamp <- NULL
 

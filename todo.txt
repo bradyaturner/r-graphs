@@ -2,10 +2,6 @@ GRAPHING TODO LIST
 ########################
 
 * graph
-  - multiple lines w/ colors
-  - auto scale x and y axis
-  - labels
-  - legend
   - derivative
 * stats
   - max
