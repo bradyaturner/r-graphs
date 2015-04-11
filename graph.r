@@ -44,21 +44,8 @@ for (i in names(d3)) {
           plot(p4)
 }
 
-# Two plots on same page using multiplot
-p2 <- ggplot(data, aes(x=timestamp, y=play.hw.0Src)) +
-        geom_line() +
-        ggtitle("play.hw.0Src") +
-        ylab("Latency (s)") +
-        xlab("Time (s)")
-p3 <- ggplot(data, aes(x=timestamp, y=play.hw.0)) +
-        geom_line() +
-        ggtitle("play.hw.0") +
-        ylab("Latency (s)") +
-        xlab("Time (s)")
-multiplot(p2,p3)
-
 # All datasets plotted using facet_wrap
-p5 <- ggplot(d2.m, aes(x=timestamp,y=value)) +
+p5 <- ggplot(d2.m, aes_string(x="timestamp",y="value")) +
         geom_line() +
         ylab("Latency (s)") +
         xlab("Time (s)") +
