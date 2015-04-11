@@ -2,6 +2,7 @@ GRAPHING TODO LIST
 ########################
 
 * graph
+  * highlight background on disontinuities?
   - derivative
 * stats
   - max
@@ -11,4 +12,3 @@ GRAPHING TODO LIST
   - latency violations
 * automatically convert names: "rec-hw:0" --> "rec.hw.0"
 
-* highlight background on disontinuities?
