@@ -20,7 +20,7 @@ d2$rec.hw.0 <- NULL
 d2.m <- melt(d2, id.vars = 1)
 
 # Line plot with labels
-p <- ggplot(d2.m, aes(timestamp,value, color=variable)) +
+p <- ggplot(d2.m, aes(x=timestamp,y=value, color=variable)) +
       geom_line() +
       ggtitle("Latency Test Results") +
       ylab("Latency (s)") +
@@ -33,7 +33,7 @@ plot(p)
 d3 <- d2
 d3$timestamp <- NULL
 
-# individual graphs of each dataset
+# individual graphs of each dataset (w/ points)
 for (i in names(d3)) {
   p4 <- ggplot(data, aes(x=timestamp, y=data[[i]])) +
           geom_line() +
@@ -45,12 +45,12 @@ for (i in names(d3)) {
 }
 
 # Two plots on same page using multiplot
-p2 <- ggplot(data, aes(x=timestamp, play.hw.0Src)) +
+p2 <- ggplot(data, aes(x=timestamp, y=play.hw.0Src)) +
         geom_line() +
         ggtitle("play.hw.0Src") +
         ylab("Latency (s)") +
         xlab("Time (s)")
-p3 <- ggplot(data, aes(x=timestamp, play.hw.0)) +
+p3 <- ggplot(data, aes(x=timestamp, y=play.hw.0)) +
         geom_line() +
         ggtitle("play.hw.0") +
         ylab("Latency (s)") +
@@ -58,7 +58,7 @@ p3 <- ggplot(data, aes(x=timestamp, play.hw.0)) +
 multiplot(p2,p3)
 
 # All datasets plotted using facet_wrap
-p5 <- ggplot(d2.m, aes(timestamp,value)) +
+p5 <- ggplot(d2.m, aes(x=timestamp,y=value)) +
         geom_line() +
         ylab("Latency (s)") +
         xlab("Time (s)") +
