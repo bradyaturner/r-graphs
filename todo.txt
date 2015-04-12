@@ -5,10 +5,5 @@ GRAPHING TODO LIST
   * highlight background on disontinuities?
   - derivative
 * stats
-  - max
-  - min
   - max rate of change
-  - drops
   - latency violations
-* automatically convert names: "rec-hw:0" --> "rec.hw.0"
-
